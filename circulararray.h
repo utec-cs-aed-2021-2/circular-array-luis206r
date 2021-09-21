@@ -180,7 +180,7 @@ void CircularArray<T>::clear(){
     front=back=-1;
 }
 
-// TA: Para el operador corchetes, podrías usar fórmulas como if (front < back) -> return array[(front + (back-front))%capacity] y así para los otros casos, reduciría el costo de la función.
+// TA: Para el operador corchetes, podrías usar fórmulas como if (front < back) -> return array[(n + front)%capacity] y así para los otros casos, reduciría el costo de la función.
 template <class T>
 T &CircularArray<T>::operator[](int n){
     if(!is_empty()){
